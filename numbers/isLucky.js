@@ -6,20 +6,16 @@
 const solution = n => {
     let toString = n.toString();
     let toArray = toString.split(``);
-    let store1 = 0;
-    let store2 = 0;
- 
+    let sum1 = 0;
+    let sum2 = 0;
+  
     for(let i = 0, j = toArray.length-1; i < j; i++, j--){
-        store1 += parseInt(toArray[i]);
-        store2 += parseInt(toArray[j]);
+        sum1 += parseInt(toArray[i]);
+        sum2 += parseInt(toArray[j]);
     }
-     if(store1 === store2){
-     return true;
-    }else{
-     return false;
-     }
- }
-
-console.log(solution(1230));
-console.log(solution(573290));
-console.log(solution(4509));
+     return sum1 === sum2;
+  }
+  
+  console.log(solution(1230));
+  console.log(solution(573290));
+  console.log(solution(4509));
